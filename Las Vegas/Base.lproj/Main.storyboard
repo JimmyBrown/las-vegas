@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,32 +18,132 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vegas_sign" translatesAutoresizingMaskIntoConstraints="NO" id="fbX-7L-lWc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vegas_sign" translatesAutoresizingMaskIntoConstraints="NO" id="fbX-7L-lWc">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zk-gY-vnD">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zk-gY-vnD">
                                 <rect key="frame" x="512" y="28" width="68" height="30"/>
+                                <color key="backgroundColor" red="0.80784313725490198" green="0.0" blue="0.043137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="68" id="nXI-Cy-9i0"/>
+                                    <constraint firstAttribute="height" constant="30" id="ylV-LA-dcp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Photos">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="6t2-T4-D0d" kind="show" id="iMJ-78-XbD"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p72-VW-C1a">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p72-VW-C1a">
                                 <rect key="frame" x="20" y="28" width="136" height="30"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <color key="backgroundColor" red="0.80784313725490198" green="0.0" blue="0.043137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="fKU-jP-F1r"/>
+                                    <constraint firstAttribute="width" constant="136" id="wPx-JC-lXc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="About Las Vegas">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="arg-9k-ArV" kind="show" id="mr2-Mu-ZAc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fbX-7L-lWc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3Hl-mM-vBL"/>
+                            <constraint firstItem="p72-VW-C1a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Dta-Qb-QHA"/>
+                            <constraint firstAttribute="trailing" secondItem="fbX-7L-lWc" secondAttribute="trailing" id="Gsa-q3-q2a"/>
+                            <constraint firstItem="6zk-gY-vnD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="WQm-1g-475"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fbX-7L-lWc" secondAttribute="bottom" id="a9n-XW-gmi"/>
+                            <constraint firstItem="fbX-7L-lWc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="c7J-g7-fWM"/>
+                            <constraint firstItem="p72-VW-C1a" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="cBB-xu-rCc"/>
+                            <constraint firstItem="6zk-gY-vnD" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="iqi-tW-A1H"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="aboutBtn" destination="p72-VW-C1a" id="Kez-v3-Env"/>
+                        <outlet property="photosbtn" destination="6zk-gY-vnD" id="L67-sY-few"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="25"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="CI6-EP-hWP">
+            <objects>
+                <viewController id="arg-9k-ArV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8Q4-MZ-2Wz"/>
+                        <viewControllerLayoutGuide type="bottom" id="k0G-Uw-Qj7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PQz-Il-B0k">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vegas_bellagio" translatesAutoresizingMaskIntoConstraints="NO" id="G6l-4Z-1id">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="nTr-8c-ci0"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Las Vegas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nog-PA-0qR">
+                                <rect key="frame" x="217" y="70" width="167" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="167" id="9gw-mk-Ykq"/>
+                                    <constraint firstAttribute="height" constant="21" id="eL9-fG-um5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUk-Qc-ebS">
+                                <rect key="frame" x="20" y="20" width="54" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Back">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="G6l-4Z-1id" firstAttribute="top" secondItem="PQz-Il-B0k" secondAttribute="top" id="PeS-Uz-rbd"/>
+                            <constraint firstItem="G6l-4Z-1id" firstAttribute="leading" secondItem="PQz-Il-B0k" secondAttribute="leading" id="TOe-xC-Z5q"/>
+                            <constraint firstItem="nog-PA-0qR" firstAttribute="top" secondItem="8Q4-MZ-2Wz" secondAttribute="bottom" constant="50" id="TS2-Sv-sJh"/>
+                            <constraint firstItem="nog-PA-0qR" firstAttribute="centerX" secondItem="PQz-Il-B0k" secondAttribute="centerX" id="dL9-kd-R6Q"/>
+                            <constraint firstAttribute="trailing" secondItem="G6l-4Z-1id" secondAttribute="trailing" id="nEy-Se-OCk"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D2U-Vb-hCS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="473" y="301"/>
+            <point key="canvasLocation" x="791" y="25"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gVm-BP-mOp">
+            <objects>
+                <viewController id="6t2-T4-D0d" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OwJ-4D-0YP"/>
+                        <viewControllerLayoutGuide type="bottom" id="6sF-ba-gPZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hkY-vX-pe2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xZR-E7-bjq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="760"/>
         </scene>
     </scenes>
     <resources>
+        <image name="vegas_bellagio" width="3000" height="2084"/>
         <image name="vegas_sign" width="2592" height="1936"/>
     </resources>
 </document>
