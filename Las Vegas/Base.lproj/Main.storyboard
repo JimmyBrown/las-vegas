@@ -33,7 +33,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="6t2-T4-D0d" kind="show" id="iMJ-78-XbD"/>
+                                    <segue destination="6t2-T4-D0d" kind="show" id="1gk-QH-ib8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p72-VW-C1a">
@@ -73,10 +73,10 @@
             </objects>
             <point key="canvasLocation" x="35" y="25"/>
         </scene>
-        <!--View Controller-->
+        <!--DetailVC-->
         <scene sceneID="CI6-EP-hWP">
             <objects>
-                <viewController id="arg-9k-ArV" sceneMemberID="viewController">
+                <viewController id="arg-9k-ArV" customClass="DetailVC" customModule="Las_Vegas" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8Q4-MZ-2Wz"/>
                         <viewControllerLayoutGuide type="bottom" id="k0G-Uw-Qj7"/>
@@ -101,19 +101,108 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="avK-YS-Tiz">
+                                <rect key="frame" x="20" y="202" width="560" height="378"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="lVN-gW-v84">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Population" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocH-UZ-VV6">
+                                                <rect key="frame" x="0.0" y="0.0" width="88" height="33"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="Pd3-5l-W5W"/>
+                                                    <constraint firstAttribute="width" constant="167" id="aoq-I1-REC"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="Pd3-5l-W5W"/>
+                                                        <exclude reference="aoq-I1-REC"/>
+                                                    </mask>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="583,756" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qsz-zc-D6q">
+                                                <rect key="frame" x="0.0" y="33" width="55" height="18"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="SjK-9X-tR0"/>
+                                                    <constraint firstAttribute="width" constant="167" id="yDg-jd-qQm"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="SjK-9X-tR0"/>
+                                                        <exclude reference="yDg-jd-qQm"/>
+                                                    </mask>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4XB-Tp-V4A">
+                                        <rect key="frame" x="0.0" y="60" width="560" height="318"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Axj-K5-DxO">
+                                                <rect key="frame" x="0.0" y="0.0" width="560" height="27"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="USg-MG-x4j"/>
+                                                    <constraint firstAttribute="width" constant="167" id="hzg-a2-yuq"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="USg-MG-x4j"/>
+                                                        <exclude reference="hzg-a2-yuq"/>
+                                                    </mask>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ig-qh-jEk">
+                                                <rect key="frame" x="0.0" y="37" width="560" height="281"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="167" id="IrC-0K-0P4"/>
+                                                    <constraint firstAttribute="height" constant="21" id="TxS-gb-YAM"/>
+                                                </constraints>
+                                                <string key="text">Established in 1905, Las Vegas was incorporated as a city in 1911. At the close of the 20th century, Las Vegas was the most populous American city founded in that century (a similar distinction earned by Chicago in the 19th century). The city's tolerance for numerous forms of adult entertainment earned it the title of Sin City, and has made Las Vegas a popular setting for films, television programs, and music videos.
+
+Las Vegas is generally used to describe not just the city itself, but areas beyond the city limits—especially the resort areas on and near the Las Vegas Strip—and the Las Vegas Valley. The 4.2 mi (6.8 km) stretch of South Las Vegas Boulevard known as the Las Vegas Strip is in the unincorporated communities of Paradise, Winchester, and Enterprise, located in Clark County.</string>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="IrC-0K-0P4"/>
+                                                        <exclude reference="TxS-gb-YAM"/>
+                                                    </mask>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUk-Qc-ebS">
                                 <rect key="frame" x="20" y="20" width="54" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="backPressed:" destination="arg-9k-ArV" eventType="touchUpInside" id="dEz-3b-GE5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="avK-YS-Tiz" firstAttribute="top" secondItem="G6l-4Z-1id" secondAttribute="bottom" constant="40" id="1AK-hY-m1v"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="avK-YS-Tiz" secondAttribute="trailing" id="5z8-dO-729"/>
+                            <constraint firstItem="avK-YS-Tiz" firstAttribute="leading" secondItem="PQz-Il-B0k" secondAttribute="leadingMargin" id="EFB-X3-k9e"/>
                             <constraint firstItem="G6l-4Z-1id" firstAttribute="top" secondItem="PQz-Il-B0k" secondAttribute="top" id="PeS-Uz-rbd"/>
                             <constraint firstItem="G6l-4Z-1id" firstAttribute="leading" secondItem="PQz-Il-B0k" secondAttribute="leading" id="TOe-xC-Z5q"/>
                             <constraint firstItem="nog-PA-0qR" firstAttribute="top" secondItem="8Q4-MZ-2Wz" secondAttribute="bottom" constant="50" id="TS2-Sv-sJh"/>
+                            <constraint firstItem="k0G-Uw-Qj7" firstAttribute="top" secondItem="avK-YS-Tiz" secondAttribute="bottom" constant="20" id="b6N-Af-4qZ"/>
                             <constraint firstItem="nog-PA-0qR" firstAttribute="centerX" secondItem="PQz-Il-B0k" secondAttribute="centerX" id="dL9-kd-R6Q"/>
                             <constraint firstAttribute="trailing" secondItem="G6l-4Z-1id" secondAttribute="trailing" id="nEy-Se-OCk"/>
                         </constraints>
@@ -121,7 +210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D2U-Vb-hCS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="791" y="25"/>
+            <point key="canvasLocation" x="864" y="19"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gVm-BP-mOp">
@@ -134,16 +223,113 @@
                     <view key="view" contentMode="scaleToFill" id="hkY-vX-pe2">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ggc-1K-GAZ">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="vegas_strip" translatesAutoresizingMaskIntoConstraints="NO" id="aQs-QB-cda">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="153"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="153" id="Lmj-AE-71u"/>
+                                            <constraint firstAttribute="width" constant="240" id="Uay-tW-bbf"/>
+                                            <constraint firstAttribute="height" constant="128" id="VTn-5N-8la"/>
+                                            <constraint firstAttribute="width" constant="600" id="pV3-cB-VHD"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Uay-tW-bbf"/>
+                                                <exclude reference="VTn-5N-8la"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fsO-ca-Rp5">
+                                        <rect key="frame" x="0.0" y="161" width="600" height="220"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="vegas_dusk" translatesAutoresizingMaskIntoConstraints="NO" id="QaB-ge-Fb4">
+                                                <rect key="frame" x="0.0" y="0.0" width="295" height="220"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="300" id="Bxr-cN-0jE"/>
+                                                    <constraint firstAttribute="height" constant="220" id="aS7-Zd-Udf"/>
+                                                    <constraint firstAttribute="height" constant="220" id="jXd-mr-6eb"/>
+                                                    <constraint firstAttribute="width" constant="300" id="o5N-YH-EXJ"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="aS7-Zd-Udf"/>
+                                                        <exclude reference="o5N-YH-EXJ"/>
+                                                    </mask>
+                                                </variation>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="vegas_night" translatesAutoresizingMaskIntoConstraints="NO" id="vd2-lG-kgr">
+                                                <rect key="frame" x="303" y="0.0" width="297" height="220"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="297" id="Z7M-dh-306"/>
+                                                    <constraint firstAttribute="width" constant="297" id="n0x-80-dje"/>
+                                                    <constraint firstAttribute="height" constant="193" id="sxd-HK-5nT"/>
+                                                    <constraint firstAttribute="height" constant="220" id="yVd-w2-RMp"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="Z7M-dh-306"/>
+                                                        <exclude reference="sxd-HK-5nT"/>
+                                                    </mask>
+                                                </variation>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SUa-mq-7Bz">
+                                        <rect key="frame" x="0.0" y="389" width="600" height="191"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="vegas_nyny" translatesAutoresizingMaskIntoConstraints="NO" id="2Ba-n3-4ea">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="191"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="191" id="RVg-Wk-iwB"/>
+                                                    <constraint firstAttribute="height" constant="270" id="dLU-Gf-V3T"/>
+                                                    <constraint firstAttribute="width" constant="352" id="sK0-WI-2hP"/>
+                                                    <constraint firstAttribute="width" constant="300" id="vT3-ku-lFL"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="dLU-Gf-V3T"/>
+                                                        <exclude reference="sK0-WI-2hP"/>
+                                                    </mask>
+                                                </variation>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="vegas_paris" translatesAutoresizingMaskIntoConstraints="NO" id="wz2-FP-A3J">
+                                                <rect key="frame" x="308" y="0.0" width="292" height="191"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="292" id="6HV-ER-U6A"/>
+                                                    <constraint firstAttribute="height" constant="191" id="ABe-wG-HOl"/>
+                                                    <constraint firstAttribute="height" constant="128" id="bOt-O2-9iE"/>
+                                                    <constraint firstAttribute="width" constant="240" id="raU-wa-Xok"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="bOt-O2-9iE"/>
+                                                        <exclude reference="raU-wa-Xok"/>
+                                                    </mask>
+                                                </variation>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZR-E7-bjq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="35" y="760"/>
+            <point key="canvasLocation" x="332" y="693"/>
         </scene>
     </scenes>
     <resources>
         <image name="vegas_bellagio" width="3000" height="2084"/>
+        <image name="vegas_dusk" width="1280" height="960"/>
+        <image name="vegas_night" width="4000" height="2202"/>
+        <image name="vegas_nyny" width="2048" height="1536"/>
+        <image name="vegas_paris" width="1939" height="1454"/>
         <image name="vegas_sign" width="2592" height="1936"/>
+        <image name="vegas_strip" width="1806" height="1230"/>
     </resources>
 </document>
